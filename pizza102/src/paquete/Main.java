@@ -63,25 +63,35 @@ public class Main {
 
 	}
 	
-	public static void metodoMagicoQueDaLaSolucion(int pizza[][], int l, int h, int [] esqI, int [] esqD) {
-		int area = (esqD[0]-esqI[0])*(esqD[1]-esqI[1]);
-		if (area>h) {
-			int numChamp = 0;
-			int numTom = 0;
-			for (int i = esqI[0];i<esqD[0];i++) {
-				for(int j=esqI[1];j<esqD[1];j++) {	
-					if (pizza[i][j]==1)
-						numTom++;
-					else
-						numChamp++;
-				}
+	public static int comprobacionMagica(int pizza[][], int l, int h, int [] esqI, int [] esqD) {
+		/* 
+		 * 0 champiñones y tomates >= l  area > h
+		 * 1 champiñones y tomates >= l  area <= h
+		 * 2 champiñones y tomates < l   area > h
+		 * 3 champiñones y tomates < l   area > h
+		 */
+		int numChamp = 0;
+		int numTom = 0;
+		for (int i = esqI[0];i<esqD[0];i++) {
+			for(int j=esqI[1];j<esqD[1];j++) {	
+				if (pizza[i][j]==1)
+					numTom++;
+				else
+					numChamp++;
 			}
-			if(numChamp>=l && numTom>=l) {
-				
-			}
-			
 		}
-		
+		int area = (esqD[0]-esqI[0])*(esqD[1]-esqI[1]);
+		if (numChamp>=l && numTom>=l) {
+			if (area>h)
+				return 0;
+			else
+				return 1;
+		}else {
+			if (area>h)
+				return 2;
+			else
+				return 3;
+		}
 	}
 
 }
