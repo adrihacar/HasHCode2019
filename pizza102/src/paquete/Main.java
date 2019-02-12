@@ -62,5 +62,26 @@ public class Main {
 		
 
 	}
+	
+	public static void metodoMagicoQueDaLaSolucion(int pizza[][], int l, int h, int [] esqI, int [] esqD) {
+		int area = (esqD[0]-esqI[0])*(esqD[1]-esqI[1]);
+		if (area>h) {
+			int numChamp = 0;
+			int numTom = 0;
+			for (int i = esqI[0];i<esqD[0];i++) {
+				for(int j=esqI[1];j<esqD[1];j++) {	
+					if (pizza[i][j]==1)
+						numTom++;
+					else
+						numChamp++;
+				}
+			}
+			if(numChamp>=l && numTom>=l) {
+				
+			}
+			
+		}
+		
+	}
 
 }
