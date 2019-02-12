@@ -18,6 +18,7 @@ public class Main {
 	
 	
 	public static void main(String[] args) throws IOException {
+		
 		//input
 		String archivo_pruebas="Pruebas/a_example.in";
 		//input
@@ -37,12 +38,20 @@ public class Main {
 		//creamos matriz
 		Pizza=new int[rows][colum];
 		
-		char char_temp;
+		
+		int num_temp;
+		//si hay un 5 esque hay error
 		for(int i=0;i<rows;i++) {
 			linea=br.readLine();
 			for(int c=0;c<colum;c++) {
-				char_temp=linea.charAt(c);
-				Pizza[i][c]=(int)char_temp;
+				num_temp=5;
+				if(linea.charAt(c)=='T') {
+					num_temp=1;
+				}
+				if(linea.charAt(c)=='M') {
+					num_temp=0;
+				}
+				Pizza[i][c]=num_temp;
 			}
 			
 		}
