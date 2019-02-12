@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Main {
 	
 	//1=Tomate 
-	//0=Champi
+	//2=Champi
 	public static int Pizza[][];
 	public static int rows;
 	public static int colum;
@@ -49,7 +49,7 @@ public class Main {
 					num_temp=1;
 				}
 				if(linea.charAt(c)=='M') {
-					num_temp=0;
+					num_temp=2;
 				}
 				Pizza[i][c]=num_temp;
 			}
