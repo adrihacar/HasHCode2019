@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
 public class Main {
 	
 	//1=Tomate 
@@ -15,7 +14,6 @@ public class Main {
 	public static int colum;
 	public static int min; //minimo cada ingrediente
 	public static int max; //total maximo de ingredientes
-	
 	
 	public static void main(String[] args) throws IOException {
 		
@@ -59,10 +57,9 @@ public class Main {
 		System.out.println("Filas: "+rows);
 		System.out.println("Columnas: "+colum);
 		
-		
-
 	}
 	
+<<<<<<< Updated upstream
 	public static int comprobacionMagica(int pizza[][], int l, int h, int [] esqI, int [] esqD) {
 		/* 
 		 * 0 champiñones y tomates >= l  area > h
@@ -93,5 +90,7 @@ public class Main {
 				return 3;
 		}
 	}
+=======
+>>>>>>> Stashed changes
 
 }
