@@ -15,8 +15,11 @@ public class Main {
 	public static int carga_tipo[];
 	public static Warehouses arr_warehouse[];
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		entrada();
+		Dron drones[] = new Dron[num_drones];
+		for (int i = 0; i < num_drones; i++)
+			drones[i] = new Dron(arr_warehouse[0].x,arr_warehouse[0].y);
 
 	}
 	
@@ -76,9 +79,6 @@ public class Main {
 		
 	}
 	
-	public void crearDrones(int numeroDrones) {
-		//for (int i = 0; i < numeroDrones; i++)//int i = 0; i < city[2]; i++
-			//drones[i] = new Dron();
-	}
+	
 
 }

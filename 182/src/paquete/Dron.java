@@ -5,8 +5,9 @@ public class Dron {
 	int y;
 	boolean disponibilidad;
 	
-	public Dron() {
-		
+	public Dron(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
 	
 }
