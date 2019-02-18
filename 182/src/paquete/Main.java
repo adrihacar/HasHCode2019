@@ -20,7 +20,7 @@ public class Main {
 	}
 	
 	public static int distancia(int xi, int yi, int xf, int yf) {
-		return Math.abs(Math.sqrt((xi-xf)+(yi-yf)));
+		return (int)Math.abs(Math.sqrt(Math.pow(xi-xf, 2)+Math.pow(yi-yf, 2)));
 	}
 	
 	
@@ -54,15 +54,11 @@ public class Main {
 			carga_tipo[i]=Integer.parseInt(datos[i]);
 		}
 		
-		
-		
-		
-		
-				
-		
-		
-		
-		
+	}
+	
+	public void crearDrones(int numeroDrones) {
+		//for (int i = 0; i < numeroDrones; i++)//int i = 0; i < city[2]; i++
+			//drones[i] = new Dron();
 	}
 
 }
