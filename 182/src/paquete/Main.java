@@ -1,7 +1,7 @@
 package paquete;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -13,9 +13,10 @@ public class Main {
 	public static int turns_maxima;
 	public static int carga_maxima;
 	public static int carga_tipo[];
-	
+	public static Warehouses arr_warehouse[];
+
 	public static void main(String[] args) {
-		
+		entrada();
 
 	}
 	
@@ -53,6 +54,25 @@ public class Main {
 		for(int i=0;i<carga_tipo.length;i++) {
 			carga_tipo[i]=Integer.parseInt(datos[i]);
 		}
+		
+		linea=br.readLine();
+		arr_warehouse=new Warehouses[Integer.parseInt(linea)];
+		
+		for(int i=0;i<arr_warehouse.length;i++) {
+			linea=br.readLine();
+			datos=linea.split(" ");
+			arr_warehouse[i].x=Integer.parseInt(datos[0]);
+			arr_warehouse[i].y=Integer.parseInt(datos[1]);
+			
+			arr_warehouse[i].cantidad=new int[carga_tipo.length];
+			linea=br.readLine();
+			datos=linea.split(" ");
+			
+			for(int c=0;c<datos.length;c++) {
+				arr_warehouse[i].cantidad[c]=Integer.parseInt(datos[c]);
+			}
+			
+}
 		
 	}
 	
