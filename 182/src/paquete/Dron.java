@@ -3,7 +3,7 @@ package paquete;
 public class Dron {
 	int x;
 	int y;
-	boolean disponibilidad;
+	boolean disponibilidad=true;
 	
 	public Dron(int x, int y) {
 		this.x = x;

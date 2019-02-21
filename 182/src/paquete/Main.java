@@ -14,6 +14,7 @@ public class Main {
 	public static int carga_maxima;
 	public static int carga_tipo[];
 	public static Warehouses arr_warehouse[];
+	
 
 	public static void main(String[] args) throws IOException {
 		entrada();
@@ -77,7 +78,11 @@ public class Main {
 			
 }
 		
+		
+		
+		
 	}
+	
 	
 	
 
